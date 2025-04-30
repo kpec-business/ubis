@@ -326,8 +326,8 @@ nav.scrolled {
 }
 
 .contact {
-    background: url('/api/placeholder/1920/1080');
     background-size: cover;
+    background-color: var(--secondary-color);
     background-position: center;
     position: relative;
     padding: 6rem 2rem;
@@ -335,19 +335,11 @@ nav.scrolled {
 }
 
 .contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(41, 46, 54, 0.9) 0%, rgba(41, 46, 54, 0.8) 100%);
-    z-index: 1;
+    display: none;
 }
 
 .contact .contact-container {
     position: relative;
-    z-index: 2;
 }
 
 /* Section titles - Completely redesigned */
@@ -393,6 +385,37 @@ nav.scrolled {
 
 .section-title.light::after {
     background-color: var(--light-color);
+}
+
+.section-title-dark-bg {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.section-title-dark-bg::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-subtitle-dark-bg {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 /* About Section */
@@ -1369,8 +1392,8 @@ footer {
 
     <section id="contact" class="contact section">
         <div class="section-title-container" data-aos="fade-up">
-            <div class="section-subtitle">Skontaktuj Się</div>
-            <h2 class="section-title">Kontakt</h2>
+            <div class="section-subtitle-dark-bg">Skontaktuj Się</div>
+            <h2 class="section-title-dark-bg">Kontakt</h2>
         </div>
         <div class="contact-container">
             <div class="contact-info" data-aos="fade-right">
@@ -1379,11 +1402,6 @@ footer {
                 <p><i class="fas fa-envelope"></i> biuro.ubis@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Nyska 56b, 50-505 Wrocław</p>
                 <p><i class="fas fa-clock"></i> Godziny pracy: Pon-Pt: 8:00-17:00, Sob: 9:00-13:00</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
             </div>
             <div class="map-container" data-aos="fade-left">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.1275083147927!2d16.977750776941937!3d51.08593417170304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc25632ff9659%3A0xd40c5dbc99c895f4!2sNyska%2056B%2C%2050-505%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1682535846963!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -1396,11 +1414,6 @@ footer {
             <div class="footer-section">
                 <h4>UBIS</h4>
                 <p>Profesjonalne usługi wod-kan dla domu i firmy. Oferujemy kompleksowe rozwiązania w zakresie przyłączy wodociągowych i kanalizacyjnych, budowy szamb oraz przydomowych oczyszczalni ścieków.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
             </div>
             <div class="footer-section">
                 <h4>Usługi</h4>
@@ -1618,3 +1631,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
     </script>
 </body>
+</html>
