@@ -11,11 +11,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #0275d8; /* Modern blue */
+    --primary-color: #0275d8;
     --primary-light: #2196F3;
     --primary-dark: #01579B;
-    --secondary-color: #292E36; /* Almost black with a touch of blue */
-    --accent-color: #36AE7C; /* Fresh green */
+    --secondary-color: #292E36;
+    --accent-color: #36AE7C;
     --accent-dark: #2E8B57;
     --light-color: #FFFFFF;
     --off-white: #F6F9FC;
@@ -65,7 +65,6 @@ img {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Navigation */
 nav {
     background-color: rgba(41, 46, 54, 0.95);
     padding: 1.2rem 2rem;
@@ -153,7 +152,6 @@ nav.scrolled {
     padding: 5px;
 }
 
-/* Hero Section - Completely redesigned */
 .hero {
     position: relative;
     background: linear-gradient(135deg, rgba(2, 117, 216, 0.85) 0%, rgba(2, 117, 216, 0.5) 100%), 
@@ -211,7 +209,6 @@ nav.scrolled {
     max-width: 100%;
 }
 
-/* Buttons */
 .btn {
     padding: 0.8rem 2rem;
     border-radius: 50px;
@@ -255,7 +252,6 @@ nav.scrolled {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Wave divider */
 .wave-divider {
     height: 150px;
     overflow: hidden;
@@ -296,7 +292,6 @@ nav.scrolled {
     }
 }
 
-/* Sections */
 .section {
     padding: 5rem 2rem;
     overflow: hidden;
@@ -349,7 +344,6 @@ nav.scrolled {
     position: relative;
 }
 
-/* Section titles - Completely redesigned */
 .section-title {
     color: var(--secondary-color);
     font-size: 2.2rem;
@@ -425,7 +419,6 @@ nav.scrolled {
     margin-bottom: 0.5rem;
 }
 
-/* About Section */
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -483,7 +476,6 @@ nav.scrolled {
     margin-top: 5px;
 }
 
-/* Services - Redesigned Cards */
 .services-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -552,7 +544,6 @@ nav.scrolled {
     background-color: var(--accent-color);
 }
 
-/* Gallery Grid - New Masonry Layout */
 .gallery-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -615,7 +606,6 @@ nav.scrolled {
     opacity: 1;
 }
 
-/* Counter Section */
 .counter-section {
     background: linear-gradient(90deg, var(--accent-color) 0%, var(--primary-light) 100%);
     color: white;
@@ -665,7 +655,6 @@ nav.scrolled {
     letter-spacing: 1px;
 }
 
-/* Testimonials - New Design */
 .testimonial-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -727,7 +716,6 @@ nav.scrolled {
     font-size: 0.9rem;
 }
 
-/* FAQ Section - New Accordion Style */
 .faq-container {
     max-width: 900px;
     margin: 0 auto;
@@ -806,7 +794,6 @@ nav.scrolled {
     margin-bottom: 0;
 }
 
-/* Contact - New Design */
 .contact-container {
     max-width: 1200px;
     margin: 3rem auto 0;
@@ -856,7 +843,6 @@ nav.scrolled {
     border-radius: 10px;
 }
 
-/* Footer - New Design */
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -905,7 +891,6 @@ footer {
     color: rgba(255,255,255,0.6);
 }
 
-/* Social Media Icons */
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -929,7 +914,6 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Scroll Top Button */
 .scroll-top {
     position: fixed;
     bottom: 2rem;
@@ -964,7 +948,210 @@ footer {
     font-size: 1.2rem;
 }
 
-/* Mobile Navigation Styles */
+.cookies-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(145deg, #131313 0%, #1a1a1a 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+    border-top: 3px solid #00A5E0;
+}
+
+.cookies-popup.show {
+    transform: translateY(0);
+}
+
+.cookies-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cookies-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.cookies-icon {
+    font-size: 24px;
+    color: #00A5E0;
+}
+
+.cookies-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00A5E0;
+    margin: 0;
+}
+
+.cookies-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+}
+
+.cookies-details {
+    background: rgba(0, 165, 224, 0.1);
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 3px solid #00A5E0;
+    display: none;
+}
+
+.cookies-details.show {
+    display: block;
+}
+
+.cookies-category {
+    margin-bottom: 12px;
+}
+
+.cookies-category h4 {
+    margin: 0 0 6px 0;
+    color: #00A5E0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cookies-category p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.cookies-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.cookies-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.cookies-btn-accept {
+    background: #00A5E0;
+    color: white;
+}
+
+.cookies-btn-accept:hover {
+    background: #0077A0;
+    transform: translateY(-2px);
+}
+
+.cookies-btn-reject {
+    background: transparent;
+    color: #ccc;
+    border: 1px solid #555;
+}
+
+.cookies-btn-reject:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.cookies-btn-settings {
+    background: transparent;
+    color: #00A5E0;
+    border: 1px solid #00A5E0;
+}
+
+.cookies-btn-settings:hover {
+    background: rgba(0, 165, 224, 0.1);
+}
+
+.cookies-link {
+    color: #00A5E0;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.cookies-link:hover {
+    color: #0077A0;
+}
+
+.cookies-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cookies-toggle:last-child {
+    border-bottom: none;
+}
+
+.cookies-toggle-info {
+    flex: 1;
+}
+
+.cookies-toggle-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.cookies-toggle-desc {
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.cookies-switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background: #555;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cookies-switch.active {
+    background: #00A5E0;
+}
+
+.cookies-switch:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.cookies-switch.active:before {
+    transform: translateX(26px);
+}
+
 @media (max-width: 768px) {
     body.nav-open {
         overflow: hidden;
@@ -1005,9 +1192,46 @@ footer {
     .hamburger.active {
         transform: rotate(90deg);
     }
+
+    .cookies-popup {
+        padding: 15px;
+    }
+
+    .cookies-content {
+        gap: 12px;
+    }
+
+    .cookies-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cookies-btn {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .cookies-text {
+        font-size: 13px;
+    }
+
+    .cookies-title {
+        font-size: 16px;
+    }
 }
 
-/* Animations */
+@media (max-width: 480px) {
+    .cookies-popup {
+        padding: 12px;
+    }
+
+    .cookies-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -1030,7 +1254,6 @@ footer {
     }
 }
 
-/* Responsive */
 @media (min-width: 576px) {
      .hero-content {
         padding: 2rem;
@@ -1162,16 +1385,57 @@ footer {
 </style>
 </head>
 <body>
-       <!-- Scroll to top button -->
-       <div class="scroll-top">
+    <div id="cookiesPopup" class="cookies-popup">
+        <div class="cookies-content">
+            <div class="cookies-header">
+                <h3 class="cookies-title">Używamy plików cookies</h3>
+            </div>
+            
+            <div class="cookies-text">
+                Ta strona wykorzystuje pliki cookies w celu zapewnienia najlepszej jakości usług, personalizacji treści oraz analizy ruchu. Kontynuując korzystanie z naszej strony, wyrażasz zgodę na używanie plików cookies.
+            </div>
+
+            <div id="cookiesDetails" class="cookies-details">
+                <div class="cookies-toggle">
+                    <div class="cookies-toggle-info">
+                        <div class="cookies-toggle-title">Niezbędne</div>
+                        <div class="cookies-toggle-desc">Wymagane do podstawowego funkcjonowania strony</div>
+                    </div>
+                    <div class="cookies-switch active" data-category="necessary"></div>
+                </div>
+                
+                <div class="cookies-toggle">
+                    <div class="cookies-toggle-info">
+                        <div class="cookies-toggle-title">Analityczne</div>
+                        <div class="cookies-toggle-desc">Pomagają nam zrozumieć, jak odwiedzający korzystają ze strony</div>
+                    </div>
+                    <div class="cookies-switch" data-category="analytics"></div>
+                </div>
+                
+                <div class="cookies-toggle">
+                    <div class="cookies-toggle-info">
+                        <div class="cookies-toggle-title">Marketingowe</div>
+                        <div class="cookies-toggle-desc">Używane do wyświetlania spersonalizowanych reklam</div>
+                    </div>
+                    <div class="cookies-switch" data-category="marketing"></div>
+                </div>
+            </div>
+
+            <div class="cookies-actions">
+                <button id="acceptAll" class="cookies-btn cookies-btn-accept">Akceptuj wszystkie</button>
+                <button id="rejectAll" class="cookies-btn cookies-btn-reject">Odrzuć wszystkie</button>
+                <button id="showSettings" class="cookies-btn cookies-btn-settings">Ustawienia</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-top">
         <i class="fas fa-arrow-up"></i>
     </div>
 
     <nav>
         <div class="nav-content">
-            <a href="#" class="logo">
-                UB<span>IS</span>
-            </a>
+            <a href="#" class="logo">UBIS</a>
             <button class="hamburger">
                 <i class="fas fa-bars"></i>
             </button>
@@ -1483,9 +1747,7 @@ footer {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-       // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate on Scroll)
     AOS.init({
         duration: 800,
         easing: 'ease-out',
@@ -1494,7 +1756,6 @@ document.addEventListener('DOMContentLoaded', function() {
         delay: 100
     });
 
-    // Navigation scroll effect
     window.addEventListener('scroll', function() {
         const nav = document.querySelector('nav');
         const scrollTop = window.scrollY;
@@ -1508,7 +1769,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const body = document.querySelector('body');
@@ -1519,7 +1779,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('nav-open');
     });
     
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
@@ -1528,7 +1787,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Smooth scrolling for anchor links with offset for fixed header
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -1538,23 +1796,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Calculate header height dynamically
                 const headerHeight = document.querySelector('nav').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 
                 window.scrollTo({
-                    top: targetPosition - headerHeight - 20, // Extra 20px padding
+                    top: targetPosition - headerHeight - 20,
                     behavior: 'smooth'
                 });
             }
         });
     });
     
-    // Scroll to top button with smooth animation
     const scrollTopBtn = document.querySelector('.scroll-top');
     if (scrollTopBtn) {
         scrollTopBtn.addEventListener('click', function() {
-            // Smooth scroll with animation
             const scrollToTop = () => {
                 const c = document.documentElement.scrollTop || document.body.scrollTop;
                 if (c > 0) {
@@ -1566,7 +1821,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Counter animation with improved easing
     const counterSection = document.querySelector('.counter-section');
     if (counterSection) {
         const counters = document.querySelectorAll('.counter-value');
@@ -1578,7 +1832,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 counters.forEach(counter => {
                     const target = parseInt(counter.getAttribute('data-target'));
-                    const duration = 2500; // 2.5 seconds
+                    const duration = 2500;
                     
                     let startTime = null;
                     
@@ -1588,7 +1842,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         const elapsed = timestamp - startTime;
                         const progress = Math.min(elapsed / duration, 1);
                         
-                        // Easing function for smooth counter animation (easeOutExpo)
                         const easedProgress = progress === 1 
                             ? 1 
                             : 1 - Math.pow(2, -10 * progress);
@@ -1599,7 +1852,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (progress < 1) {
                             window.requestAnimationFrame(updateCounter);
                         } else {
-                            counter.textContent = target; // Ensure final value is exact
+                            counter.textContent = target;
                         }
                     }
                     
@@ -1608,60 +1861,47 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Check if counter section is in viewport on scroll
         window.addEventListener('scroll', startCounter);
-        // Also check on page load
         window.addEventListener('load', startCounter);
     }
     
-    // FAQ Accordion with smooth animation
     const faqQuestions = document.querySelectorAll('.faq-question');
     
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
             const currentlyActive = document.querySelector('.faq-question.active');
             
-            // If there's an active item that's not the clicked one, close it first
             if (currentlyActive && currentlyActive !== this) {
                 currentlyActive.classList.remove('active');
                 currentlyActive.nextElementSibling.classList.remove('show');
             }
             
-            // Toggle the clicked item
             this.classList.toggle('active');
             const answer = this.nextElementSibling;
             answer.classList.toggle('show');
         });
     });
     
-    // Helper function to check if element is in viewport with threshold
     function isInViewport(element, threshold = 0.2) {
         const rect = element.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         
-        // Element is considered in viewport if it's top edge has passed threshold% into view,
-        // or its bottom edge is still within the viewport
         return (
             rect.top <= windowHeight * (1 - threshold) &&
             rect.bottom >= 0
         );
     }
     
-    // Add active class to navigation based on scroll position
     function highlightNavOnScroll() {
-        // Get all sections that have an ID defined
         const sections = document.querySelectorAll('section[id]');
         
-        // Get current scroll position
         const scrollY = window.pageYOffset;
         
-        // Loop through sections to get height, top and ID values for each
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 100; // Adjust offset as needed
+            const sectionTop = section.offsetTop - 100;
             const sectionId = section.getAttribute('id');
             
-            // If our current scroll position enters the space where section is
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.add('active');
             } else {
@@ -1670,12 +1910,179 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Call the function on scroll
     window.addEventListener('scroll', highlightNavOnScroll);
     
-    // Initialize the function on page load
     highlightNavOnScroll();
 });
+
+(function() {
+    'use strict';
+    
+    const COOKIE_NAME = 'cookies_consent';
+    const COOKIE_DURATION = 365;
+    
+    const popup = document.getElementById('cookiesPopup');
+    const acceptAllBtn = document.getElementById('acceptAll');
+    const rejectAllBtn = document.getElementById('rejectAll');
+    const showSettingsBtn = document.getElementById('showSettings');
+    const detailsDiv = document.getElementById('cookiesDetails');
+    const switches = document.querySelectorAll('.cookies-switch');
+    
+    let settingsVisible = false;
+    let cookiePreferences = {
+        necessary: true,
+        analytics: false,
+        marketing: false
+    };
+    
+    function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+    }
+    
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    
+    function showPopup() {
+        popup.classList.add('show');
+    }
+    
+    function hidePopup() {
+        popup.classList.remove('show');
+    }
+    
+    function toggleSettings() {
+        settingsVisible = !settingsVisible;
+        if (settingsVisible) {
+            detailsDiv.classList.add('show');
+            showSettingsBtn.textContent = 'Ukryj ustawienia';
+        } else {
+            detailsDiv.classList.remove('show');
+            showSettingsBtn.textContent = 'Ustawienia';
+        }
+    }
+    
+    function savePreferences() {
+        const consentData = {
+            necessary: cookiePreferences.necessary,
+            analytics: cookiePreferences.analytics,
+            marketing: cookiePreferences.marketing,
+            timestamp: new Date().toISOString()
+        };
+        setCookie(COOKIE_NAME, JSON.stringify(consentData), COOKIE_DURATION);
+        hidePopup();
+        
+        if (cookiePreferences.analytics) {
+            loadAnalytics();
+        }
+        if (cookiePreferences.marketing) {
+            loadMarketing();
+        }
+    }
+    
+    function loadAnalytics() {
+        console.log('Loading analytics scripts...');
+    }
+    
+    function loadMarketing() {
+        console.log('Loading marketing scripts...');
+    }
+    
+    function updateSwitches() {
+        switches.forEach(switchEl => {
+            const category = switchEl.getAttribute('data-category');
+            if (cookiePreferences[category]) {
+                switchEl.classList.add('active');
+            } else {
+                switchEl.classList.remove('active');
+            }
+        });
+    }
+    
+    acceptAllBtn.addEventListener('click', function() {
+        cookiePreferences = {
+            necessary: true,
+            analytics: true,
+            marketing: true
+        };
+        savePreferences();
+    });
+    
+    rejectAllBtn.addEventListener('click', function() {
+        cookiePreferences = {
+            necessary: true,
+            analytics: false,
+            marketing: false
+        };
+        savePreferences();
+    });
+    
+    showSettingsBtn.addEventListener('click', function() {
+        if (!settingsVisible) {
+            toggleSettings();
+        } else {
+            savePreferences();
+        }
+    });
+    
+    switches.forEach(switchEl => {
+        switchEl.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            if (category === 'necessary') {
+                return;
+            }
+            
+            cookiePreferences[category] = !cookiePreferences[category];
+            updateSwitches();
+            
+            showSettingsBtn.textContent = 'Zapisz ustawienia';
+        });
+    });
+    
+    function init() {
+        const existingConsent = getCookie(COOKIE_NAME);
+        
+        if (!existingConsent) {
+            setTimeout(showPopup, 1000);
+        } else {
+            try {
+                const consentData = JSON.parse(existingConsent);
+                cookiePreferences = {
+                    necessary: consentData.necessary !== false,
+                    analytics: consentData.analytics === true,
+                    marketing: consentData.marketing === true
+                };
+                
+                if (cookiePreferences.analytics) {
+                    loadAnalytics();
+                }
+                if (cookiePreferences.marketing) {
+                    loadMarketing();
+                }
+            } catch (e) {
+                setTimeout(showPopup, 1000);
+            }
+        }
+        
+        updateSwitches();
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
     </script>
 </body>
 </html>
